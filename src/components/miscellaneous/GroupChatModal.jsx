@@ -20,6 +20,7 @@ import {
   import UserBadgeItem from "../userAvatar/UserBadgeItem";
   import UserListItem from "../userAvatar/UserListItem";
 import ChatLoading from "../ChatLoading";
+import { server } from "../../main";
   
   const GroupChatModal = ({ children }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -60,7 +61,7 @@ import ChatLoading from "../ChatLoading";
             Authorization: `Bearer ${user.token}`,
           },
         };
-        const { data } = await axios.get(`http://localhost:5000/api/user?search=${search}`, config);
+        const { data } = await axios.get(`${server}/api/user?search=${search}`, config);
         console.log(data);
         setLoading(false);
         setSearchResult(data);
@@ -99,7 +100,7 @@ import ChatLoading from "../ChatLoading";
           },
         };
         const { data } = await axios.post(
-          `http://localhost:5000/api/chat/group`,
+          `${server}/api/chat/group`,
           {
             name: groupChatName,
             users: JSON.stringify(selectedUsers.map((u) => u._id)),
