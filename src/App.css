@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 .App {
   min-height: 100vh;
   display: flex;
-  background-image: url("./background.png");
+  background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAzL3JtNjEwLXJlbWl4LTgxLmpwZw.jpg");
   background-position: center;
   background-size: cover;
 }
