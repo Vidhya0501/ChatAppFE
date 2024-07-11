@@ -21,7 +21,7 @@ import Signup from "../components/Authentication/SignUp";
       const user = JSON.parse(localStorage.getItem("userInfo"));
   
       if (user) navigate("/chats");
-    }, [history]);
+    }, [navigate]);
   
     return (
       <Container maxW="xl" centerContent>
