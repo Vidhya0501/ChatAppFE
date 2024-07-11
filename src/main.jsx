@@ -6,7 +6,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 import ChatProvider from "./Context/ChatProvider.jsx";
 
-export const server = "https://chatappbe-806c.onrender.com";
+// export const server = "https://chatappbe-806c.onrender.com";
+export const server = "http://localhost:8000/"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ChakraProvider>
