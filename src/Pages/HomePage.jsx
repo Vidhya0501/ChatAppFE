@@ -9,19 +9,19 @@ import {
     Text,
   } from "@chakra-ui/react";
   import { useEffect } from "react";
-  import { useNavigate } from "react-router-dom";
+  import { useHistory } from "react-router-dom";
   import Login from "../components/Authentication/Login";
 import Signup from "../components/Authentication/SignUp";
   
   
   function Homepage() {
-    const navigate = useNavigate();
+    const history = useHistory();
   
     useEffect(() => {
       const user = JSON.parse(localStorage.getItem("userInfo"));
   
-      if (user) navigate("/chats");
-    }, [navigate]);
+      if (user) history.push("/chats");
+    }, [history]);
   
     return (
       <Container maxW="xl" centerContent>
